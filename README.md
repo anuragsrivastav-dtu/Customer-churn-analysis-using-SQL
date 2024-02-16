@@ -24,24 +24,24 @@ The query returns an empty table, showing there are no duplicate rows.
 
 We start out by finding the null count of columns with null values present.  
 
-SELECT 'Tenure' as ColumnName, COUNT(*) AS NullCount   
+SELECT 'Tenure' as ColumnName, COUNT(*) AS NullCount  
 FROM ecommercechurn  
-WHERE Tenure IS NULL   
+WHERE Tenure IS NULL  
 UNION  
-SELECT 'WarehouseToHome' as ColumnName, COUNT(*) AS NullCount   
-FROM ecommercechurn
-WHERE warehousetohome IS NULL 
-UNION
-SELECT 'HourSpendonApp' as ColumnName, COUNT(*) AS NullCount 
-FROM ecommercechurn
+SELECT 'WarehouseToHome' as ColumnName, COUNT(*) AS NullCount  
+FROM ecommercechurn  
+WHERE warehousetohome IS NULL  
+UNION  
+SELECT 'HourSpendonApp' as ColumnName, COUNT(*) AS NullCount  
+FROM ecommercechurn  
 WHERE hourspendonapp IS NULL
-UNION
+UNION  
 SELECT 'OrderAmountHikeFromLastYear' as ColumnName, COUNT(*) AS NullCount 
-FROM ecommercechurn
+FROM ecommercechurn  
 WHERE orderamounthikefromlastyear IS NULL 
-UNION
-SELECT 'CouponUsed' as ColumnName, COUNT(*) AS NullCount 
-FROM ecommercechurn
+UNION  
+SELECT 'CouponUsed' as ColumnName, COUNT(*) AS NullCount   
+FROM ecommercechurn  
 WHERE couponused IS NULL 
 UNION
 SELECT 'OrderCount' as ColumnName, COUNT(*) AS NullCount 
